@@ -1,46 +1,47 @@
-        Event Simulation System
+This C++ code implements a simulation system for managing events using a combination of a linked list (queue) and an AVL tree. The program allows users to add events, process upcoming events, and display the current state of the simulation.
 
-1. Introduction:
-The Event Simulation System is a program designed to simulate and manage events using a combination of data structures, including a linked list for event queue management and an AVL tree for efficient event scheduling. This report provides an overview of the code structure, functionality, and usage of the system.
+Course Information:
 
-2. Code Overview:
-The system is implemented in C++ and consists of following classes:
+Course Code: CS221
+University: Ghulam Ishaq Khan Institute of Engineering Sciences and Technology (GIKI)
+Instructor: Usama Arshad
+Group Members: Abdullah Shabbir, Usama Sadiq, Syed Faiq Haider Naqvi
+Code Overview:
 
-2.1. EventType Class
-This class represents predefined event types, storing a type ID and type name.
+Event Types and Events:
 
-2.2. Event Class
-The Event class represents individual events, storing details such as event ID, name, description, type, date and time, location, address, organizer, number of participants, capacity, and status.
+The program defines classes for "EventType" and "Event," where EventType represents predefined event types, and Event represents individual events with various details.
+Events are timestamped and categorized into types.
+Event Queue:
 
-2.3. EventNode and EventQueue Classes
-These classes implement a linked list to manage the event queue. The queue is used to enqueue and dequeue events.
+A linked list-based event queue is implemented for managing the order of events.
+Events are enqueued and dequeued based on their scheduled time.
+AVL Tree:
 
-2.4. AVLNode and AVLTree Classes
-The AVL tree is used for efficient event scheduling based on event timestamps. The AVL tree supports operations such as insertion, deletion, and traversal.
+An AVL tree is used to efficiently manage events ordered by timestamp.
+The tree ensures balanced insertion and deletion operations for optimized event scheduling.
+Simulation System:
 
-2.5. SimulationSystem Class
-The SimulationSystem class manages the overall simulation, including the event queue, AVL tree, event counters, predefined event types, and simulation menu options.
+The SimulationSystem class integrates the event queue and AVL tree to manage the overall simulation.
+It includes methods for adding events, processing the next event, and displaying the simulation state.
+User Interaction:
 
-3. Key Features
-3.1. Event Management
-•	Event Creation: Users can create new events by providing details such as name, description, type, date, time, location, address, organizer, number of participants, and capacity.
-•	Event Queue: Events are enqueued into a linked list, representing the order in which they occur.
+The main function provides a user interface for interacting with the simulation.
+Users can add events, process the next event, display the simulation state, or exit the program.
+Menu-driven Interface:
 
-3.2. AVL Tree for Efficient Scheduling
-•	AVL Tree: An AVL tree is used to efficiently schedule events based on their timestamps.
-•	Venue Availability: The system checks the availability of the venue at the specified time before inserting an event into the AVL tree.
+The main loop allows users to choose options from a menu, including adding events, processing events, and viewing the simulation state.
+File Input:
 
-3.3. Simulation Control
-•	Menu Interface: The system provides a menu interface for users to add events, process the next event, display the simulation state, and exit the simulation.
+Event types are loaded from a file ("event_types.txt") during initialization.
+Key Functionality:
 
-4. Usage
-1.	Compile and Run: Compile the C++ code and run the executable.
-2.	Menu Options: Choose from the following options:
-•	Add Event (Option 1): Add a new event to the simulation.
-•	Process Next Event (Option 2): Simulate the processing of the next event.
-•	Display Simulation State (Option 3): View the current state of the simulation.
-•	Exit (Option 4): Exit the simulation.
+Adding events ensures proper insertion into both the event queue and the AVL tree.
+Processing the next event removes it from the queue and AVL tree, simulating event execution.
+The displaySimulationState function showcases the current state of the simulation, including the event queue and the in-order traversal of the AVL tree.
+Note:
 
-5. Conclusion
-The Event Simulation System provides a flexible and efficient way to manage and simulate events. The use of a linked list for the event queue and an AVL tree for event scheduling ensures smooth and organized event processing.
-
+The code demonstrates a practical implementation of data structures (linked list and AVL tree) for managing events efficiently.
+Timestamps are used for ordering events in both the queue and the AVL tree.
+The program allows for predefined event types loaded from a file.
+This code serves as a foundational structure for a simulation system, showcasing the application of data structures and algorithms in event management.
