@@ -1,10 +1,4 @@
 
-This C++ code, part of the CS221 course at Ghulam Ishaq Khan Institute of Engineering Sciences and Technology (GIKI), implements a simulation system for event management. 
-Developed by:
--Abdullah Shabbir
--Usama Sadiq
--Syed Faiq Haider Naqvi
-under the instruction of Usama Arshad, the program utilizes linked lists (queue) and an AVL tree for efficient scheduling and processing of events.
 
 Code Overview:
 
